@@ -1,148 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A Carlos Diesel oferece serviços especializados em veículos a diesel em Montes Claros, com foco em qualidade, segurança e confiança. Cuide do seu motor com os melhores profissionais da área.">
-    <title>Oficina Diesel</title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Carlos Diesel oferece serviços especializados em veículos a diesel em Montes Claros, com foco em qualidade, segurança e confiança.">
+  <title>Oficina Diesel</title>
+
+  <!-- Preload CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="gabi.css" as="style">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Seu CSS (carregado sem bloquear) -->
+  <link rel="stylesheet" href="gabi.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="gabi.css"></noscript>
+
+  <!-- Pré-conexão p/ fontes (caso use Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS crítico inline -->
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; margin:0; }
+    .hero { min-height: 100vh; display:flex; align-items:center; justify-content:center; text-align:center; }
+  </style>
 </head>
 <body>
-   
-    <header class="header">
-        <nav class="navbar">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contatos</a>
-        </nav>
-    </header>
 
-<section id="inicio" class="hero is-blurred">
-  <img class="hero__bg" src="/images/carlosdiesel2.png" alt="Carro Diesel">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#inicio">Carlos Diesel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="hero__content">
-    <h1 class="hero__title">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="inicio" class="hero">
+  <div class="hero-content text-white">
+    <!-- Imagem principal (LCP) -->
+    <img src="images/banner.webp" 
+         alt="Oficina Carlos Diesel"
+         width="1200" height="600"
+         fetchpriority="high"
+         class="img-fluid rounded shadow mb-3">
+    <h1 class="fw-bold display-5 bg-dark bg-opacity-50 p-3 rounded">
       A sua mecânica de confiança em Montes Claros
     </h1>
   </div>
 </section>
 
-
-   <section class="sobre" id="sobre">
-       <h1>Especialistas em Veículos a Diesel em Montes Claros</h1>
-        <p>Quem tem caminhonete, caminhão ou utilitário a diesel sabe a
-            importância de manter o veículo em boas condições. 
-            Na <strong>Carlos Diesel</strong>, oferecemos serviços
-            de confiança, qualidade e transparência. Nosso compromisso
-            é garantir a <strong>segurança</strong> e o <strong>bom desempenho do motor a diesel,</strong>
-            seja para uso pessoal ou empresarial.
-        </p>
-        <p>Na Carlos Diesel, acreditamos que <strong>cada motor tem uma história e cada cliente merece confiança.</strong> 
-            Nossa jornada começou com uma paixão por veículos a diesel e o desejo de oferecer um serviço honesto, 
-            especializado e acessível para todos.</p>
-
-        <p><strong>Por que existimos?</strong></p>
-
-        <p> Nossa oficina nasceu para resolver um problema comum:<strong> a
-            falta de atendimento especializado em veículos a diesel, </strong> com qualidade e
-            clareza em cada etapa. Queremos que cada cliente <strong>sinta segurança e 
-            satisfação</strong> ao trazer seu veículo até nós.</p>
-    </section>
-
-    
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <p>Na <strong>Carlos Diesel</strong>, cuidamos do seu veículo
-        com <strong>profissionalismo e atenção aos detalhes.</strong>
-        Oferecemos uma ampla gama de serviços para garantir que seu carro ou caminhão
-        funcione sempre da melhor forma:
-        </p>
-    </section>
-
-
-    <section class="services">
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Manutenção preventiva</h3>
-      <p>Evite surpresas desagradáveis na estrada! 
-        Nossa manutenção preventiva garante que cada componente do seu veículo esteja funcionando perfeitamente.
-        Fazemos revisões completas, substituição de peças desgastadas e ajustes essenciais para
-        prolongar a vida útil do motor e aumentar a segurança.</p>
-    </div>
-    <img src="/images/manutençaopreventiva.jpg" alt="Manutenção preventiva" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Reparos em motores diesel</h3>
-      <p>Seu motor perdeu potência ou apresentou falhas? Contamos com equipamentos modernos e técnicos especializados
-        para diagnosticar e reparar motores diesel de forma rápida e eficiente. 
-        Restauramos a força e a confiabilidade do seu veículo</p>
-    </div>
-    <img src="/images/reparosemmmotoresdiesel.jpeg" alt="Reparos em motores diesel" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Sistemas de injeção e turbocompressores</h3>
-      <p>O segredo do desempenho do motor está aqui. Fazemos limpeza, ajustes e reparos completos no sistema de injeção e turbocompressor, 
-        garantindo melhor consumo de combustível e potência máxima.</p>
-    </div>
-    <img src="/images/sistemadeinjecao.jpg" alt="Sistemas de injeção e turbocompressores" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Transmissão e embreagem</h3>
-      <p>Dificuldade nas trocas de marcha? Nossa equipe realiza manutenção e reparos para que a transmissão e a embreagem funcionem com suavidade e segurança.</p>
-    </div>
-    <img src="/images/transmissao.jpg" alt="Transmissão e embreagem" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Suspensão e freios</h3>
-      <p>Viaje com conforto e segurança! Revisamos e ajustamos suspensão e freios, garantindo estabilidade, aderência e frenagens seguras em qualquer situação.</p>
-    </div>
-    <img src="/images/suspensaoefreios.jpg" alt="Suspensão e freios" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Socorro mecânico</h3>
-      <p>Imprevistos acontecem, e você não precisa ficar parado. Oferecemos atendimento rápido na estrada para solucionar problemas emergenciais no seu veículo diesel.</p>
-    </div>
-    <img src="/images/socorromecanico.jpg" alt="Socorro mecânico" loading="lazy">
-  </div>
-
-  <div class="service-card">
-    <div class="service-text">
-      <h3>Serviços estéticos automotivos</h3>
-      <p>Mais do que desempenho, cuidamos da aparência do seu carro. Polimento, higienização e proteção da pintura para manter o visual sempre impecável.</p>
-    </div>
-    <img src="/images/esteticoautomotivo.jpg" alt="Serviços estéticos automotivos" loading="lazy">
+<!-- Sobre -->
+<section id="sobre" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Especialistas em Veículos a Diesel em Montes Claros</h2>
+    <p class="lead text-center">
+      Quem tem caminhonete, caminhão ou utilitário a diesel sabe a importância de manter o veículo em boas condições. 
+      Na <strong>Carlos Diesel</strong>, oferecemos serviços de confiança, qualidade e transparência.
+    </p>
+    <p class="text-center">
+      Nossa oficina nasceu para resolver um problema comum: 
+      <strong>a falta de atendimento especializado em veículos a diesel</strong>, com qualidade e clareza em cada etapa.
+    </p>
   </div>
 </section>
 
-    
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Estamos prontos para ouvir você. Preencha o formulário abaixo para enviar sua mensagem, depoimento, 
-        sugestão ou solicitar um orçamento na oficina.</p>
+<!-- Serviços -->
+<section id="servicos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-3">Serviços</h2>
+    <p class="text-center mb-5">
+      Na <strong>Carlos Diesel</strong>, cuidamos do seu veículo com <strong>profissionalismo e atenção aos detalhes.</strong>
+    </p>
 
-        <form id="formContato">
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required><br><br>
+    <div class="row g-4">
 
-            <label for="telefone">Telefone:</label><br>
-            <input type="tel" id="telefone" name="telefone" required><br><br>
-            
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/manutencao.webp" class="card-img-top"
+               alt="Manutenção preventiva" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Manutenção preventiva</h5>
+            <p class="card-text">Evite surpresas desagradáveis! Revisões completas e substituição de peças para maior segurança e durabilidade.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/reparos.webp" class="card-img-top"
+               alt="Reparos em motores diesel" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Reparos em motores diesel</h5>
+            <p class="card-text">Diagnóstico rápido e reparos eficientes para restaurar a força e a confiabilidade do motor.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/injecao.webp" class="card-img-top"
+               alt="Sistemas de injeção e turbocompressores" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Sistemas de injeção</h5>
+            <p class="card-text">Limpeza e ajustes no sistema de injeção e turbocompressor para potência e economia.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/transmissao.webp" class="card-img-top"
+               alt="Transmissão e embreagem" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Transmissão e embreagem</h5>
+            <p class="card-text">Trocas de marcha suaves e seguras com nossa manutenção especializada.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/suspensao.webp" class="card-img-top"
+               alt="Suspensão e freios" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Suspensão e freios</h5>
+            <p class="card-text">Segurança total com revisão de suspensão e freios para estabilidade e frenagens confiáveis.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/socorro.webp" class="card-img-top"
+               alt="Socorro mecânico" width="400" height="250" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Socorro mecânico</h5>
+            <p class="card-text">Atendimento rápido na estrada para emergências com veículos a diesel.</p>
+          </div>
+        </div>
+      </div>
 
-            <button type="submit">Enviar Mensagem</button>
+    </div>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Contato</h2>
+    <p class="text-center mb-4">Preencha o formulário abaixo para entrar em contato.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" id="nome" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone:</label>
+            <input type="tel" id="telefone" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem:</label>
+            <textarea id="mensagem" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold">Enviar Mensagem</button>
         </form>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS com defer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
 </body>
 </html>
